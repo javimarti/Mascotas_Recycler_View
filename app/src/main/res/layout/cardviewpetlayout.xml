@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/cvMascotas"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:onClick="positionAction">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/petImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/descpet"
+                    android:src="@drawable/pet48" />
+
+                <ImageView
+                    android:id="@+id/boneImg"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/petImg"
+                    android:contentDescription="@string/descpet"
+                    android:layout_gravity="right"
+                    android:layout_alignParentLeft="true"
+                    android:visibility="visible"
+                    android:src="@drawable/bonesvg" />
+
+
+                <TextView
+                    android:id="@+id/petName"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/petImg"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/petName" />
+
+                <TextView
+                    android:id="@+id/votes"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/boneLikeImg"
+                    android:layout_gravity="left"
+                    android:layout_alignParentRight="true"
+                     />
+
+
+                <ImageView
+                    android:id="@+id/boneLikeImg"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/petImg"
+                    android:layout_gravity="left"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@string/descpet"
+                    android:src="@mipmap/bonelike48"
+                    android:visibility="visible" />
+
+
+        </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
