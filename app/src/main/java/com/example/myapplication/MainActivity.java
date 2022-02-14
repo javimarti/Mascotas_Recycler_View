@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
          mascotas.add(new MascotasDto(R.drawable.pet48,"Malena",R.drawable.bonesvg,"0",R.mipmap.bonelike48));
          mascotas.add(new MascotasDto(R.drawable.pet48,"Lola",R.drawable.bonesvg,"0",R.mipmap.bonelike48));
          mascotas.add(new MascotasDto(R.drawable.pet48,"Morita",R.drawable.bonesvg,"0",R.mipmap.bonelike48));
+        mascotas.add(new MascotasDto(R.drawable.pet48,"Gala",R.drawable.bonesvg,"0",R.mipmap.bonelike48));
 
     }
 

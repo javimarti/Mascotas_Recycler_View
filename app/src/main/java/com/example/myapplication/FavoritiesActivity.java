@@ -1,8 +1,11 @@
 package com.example.myapplication;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,7 +29,7 @@ public class FavoritiesActivity extends AppCompatActivity {
         int likeArray[] = new int[5];
         super.onCreate(savedInstanceState);
         setContentView(R.layout.favoritieslayout);
-        Toolbar actionBar =(Toolbar) findViewById(R.layout.favoritesactionbar);
+        Toolbar actionBar =(Toolbar) findViewById(R.layout.favoritesubirsactionbar);
 
         setSupportActionBar((Toolbar) actionBar);
 
@@ -41,8 +44,8 @@ public class FavoritiesActivity extends AppCompatActivity {
             Arrays.sort(likeArray);
         }
         mascotas= new ArrayList<MascotasDto>();
-        for (int i=0 ;i< 4;i++) {
-            mascotas.add(mascotasfromMain.get(likeArray[i]));
+        for (int i=0 ;i< 5;i++) {
+            mascotas.add(mascotasfromMain.get(i));
         }
 
         listmascotas = (RecyclerView) findViewById(R.id.rvMascotas);
@@ -50,6 +53,17 @@ public class FavoritiesActivity extends AppCompatActivity {
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         listmascotas.setLayoutManager(llm);
         inicializarAdaptador();
+
+        ImageView star = (ImageView) findViewById(R.id.arrowImg);
+        star.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(FavoritiesActivity.this,MainActivity.class );
+
+                startActivity(intent);
+            }
+        });
     }
     public void inicializarAdaptador(){
         adaptador = new MascotasAdaptador(mascotas);
